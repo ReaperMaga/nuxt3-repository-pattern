@@ -1,4 +1,4 @@
-import { fetchData } from '~/core/api'
+import { fetchData } from '~/utils/api'
 
 export interface CoffeeRepository {
   getCoffees: () => Promise<Coffee[]>
@@ -10,6 +10,6 @@ class DefaultCoffeeRepository {
   }
 }
 
-export function createCoffeeRepository(): CoffeeRepository {
-  return new DefaultCoffeeRepository()
-}
+const coffeeRepository = new DefaultCoffeeRepository()
+
+export default coffeeRepository

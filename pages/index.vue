@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import SimpleText from '~/components/SimpleText.vue'
 
-const { $api } = useNuxtApp()
+const { coffee } = useApi()
 
-const coffees = await $api.products.getCoffees()
+const coffees = await coffee.getCoffees()
 </script>
 
 <template>
   <div class="w-screen h-screen bg-slate-950 flex items-center justify-center flex-col font-jetbrains-mono">
-    <SimpleText v-for="coffee in coffees" :key="coffee.id" :text="coffee.title" />
+    <SimpleText v-for="cof in coffees" :key="cof.id" :text="cof.title" />
   </div>
 </template>
 
