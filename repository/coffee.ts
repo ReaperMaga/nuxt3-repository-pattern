@@ -10,6 +10,6 @@ class DefaultCoffeeRepository {
   }
 }
 
-const coffeeRepository = new DefaultCoffeeRepository()
+const coffeeRepository: CoffeeRepository = new DefaultCoffeeRepository()
 
 export default coffeeRepository
